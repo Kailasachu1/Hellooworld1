@@ -1,19 +1,27 @@
 pipeline {
-    agent any 
+    agent any
+    tools { 
+        maven 'maven_3.8.5' 
+        jdk 'jdknew' 
+    }
+   
     stages {
-        stage('Build') { 
+        stage ('Initialize') {
             steps {
-                // 
+                bat '''
+                    echo "PATH = ${PATH}"
+                    echo "MAVEN_HOME = ${MAVEN_HOME}"
+                ''' 
             }
         }
-        stage('Test') { 
+        stage('checkout') {
             steps {
-                // 
+                checkout scm
             }
         }
-        stage('Deploy') { 
+        stage('build') {
             steps {
-                // 
+                bat 'mvn  -B -DskipTests clean package'
             }
         }
     }
