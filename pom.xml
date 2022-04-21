@@ -5,6 +5,7 @@
 	<groupId>helloworld_sravan</groupId>
 	<artifactId>helloworld</artifactId>
 	<version>0.0.1</version>
+	<name>helloworld</name>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
