@@ -30,8 +30,8 @@ pipeline {
                     [
                     artifactId: 'helloworld', 
                     classifier: '', 
-                    file: 'target/helloworld-0.0.1.war', 
-                    type: 'war'
+                    file: 'target/helloworld-0.0.1.jar', 
+                    type: 'jar'
                       ]
                     ], 
                     credentialsId: 'nexus3', 
