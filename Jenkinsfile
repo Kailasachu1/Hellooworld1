@@ -30,7 +30,7 @@ pipeline {
                     [
                     artifactId: 'helloworld', 
                     classifier: '', 
-                    file: 'target/helloworld-1.0.0.jar', 
+                    file: 'target/helloworld-0.0.1.jar', 
                     type: 'jar'
                       ]
                     ], 
@@ -40,7 +40,7 @@ pipeline {
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
                     repository: 'Test', 
-                    version: '1.0.0'
+                    version: '0.0.1'
             }
         }
     }
